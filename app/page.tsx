@@ -87,7 +87,7 @@ export default function Home() {
             <div key={index} className={styles.card}>
               <div className={styles.cardImageWrapper}>
                 {novel.image ? (
-                  <Image src={novel.image} alt={novel.title} fill style={{ objectFit: 'cover' }} />
+                  <Image src={novel.image} alt={novel.title} fill style={{ objectFit: 'contain' }} />
                 ) : (
                   <div style={{ width: '100%', height: '100%', background: '#2a2a30' }}></div>
                 )}
@@ -141,6 +141,7 @@ export default function Home() {
           <a href="https://www.instagram.com/xavierdaloowarr" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>Instagram</a>
           <a href="https://www.facebook.com/profile.php?id=61570757602681" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>Facebook</a>
           <a href="https://discord.gg/EyNxxbdWt" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>Discord</a>
+          <a href="mailto:abdullateefebahi@gmail.com" className={styles.socialLink}>Email</a>
         </div>
 
         <p className={styles.footerText}>© {new Date().getFullYear()} by Xavier Daloonwarr. All rights reserved.</p>
