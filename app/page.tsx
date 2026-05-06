@@ -44,7 +44,7 @@ export default function Home() {
     <div className={styles.main}>
       <Head>
         <title>HOME Author | Xavier Daloonwarr</title>
-        <meta name="description" content="Top selling Author Xavier Daloonwarr with over 15 million book sales. Check out their other works including My vampire system and merchandise." />
+        <meta name="description" content="Speculative Fiction Author and Dark Manga Scriptwriter." />
       </Head>
 
       {/* Header Navigation */}
@@ -72,9 +72,9 @@ export default function Home() {
       <section id="home" className={styles.hero} style={{ backgroundImage: 'url(/images/hero.png)' }}>
         <div className={styles.heroOverlay}></div>
         <div className={`${styles.heroContent} animate-fade-in`}>
-          <h1 className={styles.heroTitle}>Top Selling Author</h1>
+          <h1 className={styles.heroTitle}>Speculative Fiction Author and Dark Manga Scriptwriter</h1>
           <p className={styles.heroSubtitle}>
-            UK-based, New York Times-bestselling LitRPG author Xavier Daloonwarr. With fifteen million copies sold globally.
+            World-Builder and Scriptwriter for the Sovereign Virtual Haven. Crafting pulse-pounding epics at the intersection of AI and human survival.
           </p>
           <a href="#novels" className={styles.ctaButton}>Explore Works</a>
         </div>
@@ -111,12 +111,15 @@ export default function Home() {
             />
           </div>
           <div className={styles.aboutText}>
-            <h2 className={styles.sectionTitle} style={{ left: '0', transform: 'none' }}>About Me</h2>
+            <h2 className={styles.sectionTitle} style={{ left: '0', transform: 'none' }}>About the Author</h2>
             <p>
-              UK-based, New York Times-bestselling LitRPG author Xavier Daloonwarr is known for series like My Vampire System, My Dragon System, and My Werewolf System.
+              Xavier is an architect of speculative worlds, operating at the precise intersection of technical systems and dark, atmospheric fiction. His work explores the visceral boundaries between humanity and artificial intelligence, often plunging readers into gritty post-apocalyptic landscapes and complex urban transmigration epics.
             </p>
             <p>
-              Here you can find various links to all my works, and information such as where to start reading in my System/Talen Series and upcoming productions.
+              Influenced by the sharp, high-contrast aesthetics of dark manga and the structural rigor of engineering, Xavier approaches storytelling as both a creative pursuit and a systemic design. Every narrative is built on a foundation of internal logic, where the mechanics of the universe—from the cold calculations of orbital physics to the specific dynamics of combat—are as vital as the characters themselves.
+            </p>
+            <p>
+              Specializing in &quot;slow-burn&quot; lore and high-stakes tension, Xavier crafts immersive ecosystems that challenge perceptions of survival and sovereignty. Whether through expansive webnovels or cinematic manga scripts, his work is dedicated to building sovereign virtual havens for readers who seek complexity, grit, and pulse-pounding depth.
             </p>
             <a href="https://www.patreon.com/XavierDALOONWARR" target="_blank" rel="noopener noreferrer" className={styles.ctaButton} style={{ marginTop: '1rem' }}>
               Support on Patreon

@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Xavier Daloonwarr | Author",
-  description: "Top selling Author Xavier Daloonwarr with over 15 million book sales.",
+  description: "Speculative Fiction Author and Dark Manga Scriptwriter.",
 };
 
 export default function RootLayout({
