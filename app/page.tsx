@@ -45,7 +45,7 @@ export default function Home() {
 
   const novels: Novel[] = [
     { title: "My Gene Evolution System", genre: "Fantasy - Action - Sci-fi", image: "/images/my_gene_evolution.png", status: "Started, Publishing, On Hiatus", link: "https://wbnv.in/a/a6iHw2J" },
-    { title: "Blood and Ash", genre: "Fantasy - Mystery - Horror", image: "/images/blood_and_ash.png", status: "Started, Publishing, Ongoing", link: "https://wbnv.in/a/99jmMnv" },
+    { title: "Blood and Ash", genre: "Fantasy - Mystery - Horror", image: "/images/blood_and_ash.png", status: "Started, Publishing, Ongoing", link: "https://wbnv.in/a/99jmMnV" },
     { title: "Godfiend", genre: "Fantasy - Action - Transmigration", image: "/images/godfiend.png", status: "Coming Soon!" },
     { title: "Warzone", genre: "Fantasy - Action - Horror", image: "/images/warzone.png", status: "Coming Soon!" },
     { title: "The Failed Swordsman", genre: "Fantasy - Action - Survival", image: "/images/the_failed_swordsman.png", status: "Coming Soon!" },
@@ -184,13 +184,13 @@ export default function Home() {
                 <p className={styles.modalDescription}>
                   Dive into the gripping world of {selectedNovel.title}. A masterful tale exploring the depths of {selectedNovel.genre.split(' - ')[0].toLowerCase()} and intense action.
                 </p>
-                <a 
-                  href={selectedNovel.status === "Coming Soon!" ? undefined : (selectedNovel.link || "#")} 
+                <a
+                  href={selectedNovel.status === "Coming Soon!" ? undefined : (selectedNovel.link || "#")}
                   target={selectedNovel.link ? "_blank" : undefined}
                   rel={selectedNovel.link ? "noopener noreferrer" : undefined}
-                  className={styles.ctaButton} 
-                  style={{ 
-                    marginTop: '1.5rem', 
+                  className={styles.ctaButton}
+                  style={{
+                    marginTop: '1.5rem',
                     display: 'inline-block',
                     opacity: selectedNovel.status === "Coming Soon!" ? 0.6 : 1,
                     cursor: selectedNovel.status === "Coming Soon!" ? "not-allowed" : "pointer"
