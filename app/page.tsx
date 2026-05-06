@@ -27,7 +27,7 @@ export default function Home() {
 
   const novels = [
     { title: "My Gene Evolution System", genre: "Fantasy - Action - Sci-fi", image: "/images/my_gene_evolution_system.jpeg" },
-    { title: "Blood and Ash", genre: "Fantasy - Action - Modern", image: "/images/blood_and_ash.jpeg" },
+    { title: "Blood and Ash", genre: "Fantasy - Mystery - Horror", image: "/images/blood_and_ash.jpeg" },
     { title: "Godfiend", genre: "Fantasy - Action - Transmigration", image: "/images/godfiend.png" },
     { title: "Warzone", genre: "Fantasy - Action - Horror", image: "/images/warzone.png" },
     { title: "The Failed Swordsman", genre: "Fantasy - Action - Magic", image: "/images/the_failed_swordsman.png" },
