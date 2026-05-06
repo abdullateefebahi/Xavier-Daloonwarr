@@ -26,16 +26,16 @@ export default function Home() {
   };
 
   const novels = [
-    { title: "My Gene Evolution System", genre: "Fantasy - Action - Sci-fi", image: "/images/my_gene_evolution_system.jpeg" },
-    { title: "Blood and Ash", genre: "Fantasy - Mystery - Horror", image: "/images/blood_and_ash.jpeg" },
+    { title: "My Gene Evolution System", genre: "Fantasy - Action - Sci-fi", image: "/images/my_gene_evolution.png" },
+    { title: "Blood and Ash", genre: "Fantasy - Mystery - Horror", image: "/images/blood_and_ash.png" },
     { title: "Godfiend", genre: "Fantasy - Action - Transmigration", image: "/images/godfiend.png" },
     { title: "Warzone", genre: "Fantasy - Action - Horror", image: "/images/warzone.png" },
-    { title: "The Failed Swordsman", genre: "Fantasy - Action - Magic", image: "/images/the_failed_swordsman.png" },
+    { title: "The Failed Swordsman", genre: "Fantasy - Action - Survival", image: "/images/the_failed_swordsman.png" },
     { title: "Heir of Montenegro", genre: "Modern - Action", image: "/images/heir_of_montenegro.png" },
     { title: "Signed by Desire", genre: "Romance - Modern", image: "/images/signed_by_desire.png" },
-    { title: "The Ultimate Technomancer", genre: "Fantasy - Action - Magic", image: "/images/the_ultimate_technomancer.png" },
+    { title: "The Ultimate Technomancer", genre: "LitRPG - Action - Magic", image: "/images/the_ultimate_technomancer.png" },
     { title: "The Occultist", genre: "Fantasy - Action - Horror", image: "/images/the_occultist.png" },
-    { title: "Once the Gentleman", genre: "Fantasy - Action - Modern", image: "/images/once_the_gentleman.png" },
+    { title: "Once the Gentleman", genre: "Fantasy - Action - Horror", image: "/images/once_the_gentleman.png" },
     { title: "Crazy CEO", genre: "Modern - Romance", image: "/images/crazy_ceo.png" }
   ];
 
