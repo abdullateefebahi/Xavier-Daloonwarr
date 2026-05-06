@@ -26,18 +26,17 @@ export default function Home() {
   };
 
   const novels = [
-    { title: "My Gene Evolution System", genre: "Fantasy - Action - Sci-fi" },
-    { title: "Blood and Ash", genre: "Fantasy - Action - Modern" },
-    { title: "Godfiend", genre: "Fantasy - Action - Transmigration" },
-    { title: "Warzone", genre: "Fantasy - Action - Horror" },
-    { title: "The Failed Swordsman", genre: "Fantasy - Action - Magic" },
-    { title: "Heir of Montenegro", genre: "Modern - Action" },
-    { title: "Signed by Desire", genre: "Romance - Modern" },
-    { title: "The Ultimate Technomancer", genre: "Fantasy - Action - Magic" },
-    { title: "The Occultist", genre: "Fantasy - Action - Horror" },
-    { title: "Once the Gentleman", genre: "Fantasy - Action - Modern" },
-    { title: "Crazy CEO", genre: "Modern - Romance" }
-
+    { title: "My Gene Evolution System", genre: "Fantasy - Action - Sci-fi", image: "/images/my_gene_evolution_system.png" },
+    { title: "Blood and Ash", genre: "Fantasy - Action - Modern", image: "/images/blood_and_ash.png" },
+    { title: "Godfiend", genre: "Fantasy - Action - Transmigration", image: "/images/godfiend.png" },
+    { title: "Warzone", genre: "Fantasy - Action - Horror", image: "/images/warzone.png" },
+    { title: "The Failed Swordsman", genre: "Fantasy - Action - Magic", image: "/images/the_failed_swordsman.png" },
+    { title: "Heir of Montenegro", genre: "Modern - Action", image: "/images/heir_of_montenegro.png" },
+    { title: "Signed by Desire", genre: "Romance - Modern", image: "/images/signed_by_desire.png" },
+    { title: "The Ultimate Technomancer", genre: "Fantasy - Action - Magic", image: "/images/the_ultimate_technomancer.png" },
+    { title: "The Occultist", genre: "Fantasy - Action - Horror", image: "/images/the_occultist.png" },
+    { title: "Once the Gentleman", genre: "Fantasy - Action - Modern", image: "/images/once_the_gentleman.png" },
+    { title: "Crazy CEO", genre: "Modern - Romance", image: "/images/crazy_ceo.png" }
   ];
 
   return (
@@ -87,7 +86,11 @@ export default function Home() {
           {novels.map((novel, index) => (
             <div key={index} className={styles.card}>
               <div className={styles.cardImageWrapper}>
-                {/* Placeholder for book covers, can be replaced with next/image */}
+                {novel.image ? (
+                  <Image src={novel.image} alt={novel.title} fill style={{ objectFit: 'cover' }} />
+                ) : (
+                  <div style={{ width: '100%', height: '100%', background: '#2a2a30' }}></div>
+                )}
               </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardGenre}>{novel.genre}</div>
