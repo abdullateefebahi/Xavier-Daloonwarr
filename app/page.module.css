@@ -198,7 +198,7 @@
 
 .cardImageWrapper {
   width: 100%;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 600 / 800;
   background: #2a2a30; /* placeholder */
   position: relative;
   overflow: hidden;
