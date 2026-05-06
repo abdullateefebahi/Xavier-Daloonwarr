@@ -5,9 +5,27 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from './page.module.css';
 
+type Novel = { title: string; genre: string; image: string };
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [selectedNovel, setSelectedNovel] = useState<Novel | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openNovel = (novel: Novel) => {
+    setSelectedNovel(novel);
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeNovel = () => {
+    setIsModalOpen(false);
+    setTimeout(() => {
+      setSelectedNovel(null);
+      document.body.style.overflow = 'auto';
+    }, 400); // Matches the CSS transition duration
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,7 +102,7 @@ export default function Home() {
         <h2 className={styles.sectionTitle}>Novels by Xavier Daloonwarr</h2>
         <div className={styles.grid}>
           {novels.map((novel, index) => (
-            <div key={index} className={styles.card}>
+            <div key={index} className={styles.card} onClick={() => openNovel(novel)} style={{ cursor: 'pointer' }}>
               <div className={styles.cardImageWrapper}>
                 {novel.image ? (
                   <Image src={novel.image} alt={novel.title} fill style={{ objectFit: 'contain' }} />
@@ -146,6 +164,32 @@ export default function Home() {
 
         <p className={styles.footerText}>© {new Date().getFullYear()} by Xavier Daloonwarr. All rights reserved.</p>
       </footer>
+
+      {/* Novel Modal */}
+      <div className={`${styles.modalOverlay} ${isModalOpen ? styles.modalOpen : ''}`} onClick={closeNovel}>
+        <div className={`${styles.modalContent} ${isModalOpen ? styles.modalContentOpen : ''}`} onClick={(e) => e.stopPropagation()}>
+          <button className={styles.modalClose} onClick={closeNovel}>&times;</button>
+          {selectedNovel && (
+            <div className={styles.modalBody}>
+              <div className={styles.modalImageWrapper}>
+                {selectedNovel.image ? (
+                  <Image src={selectedNovel.image} alt={selectedNovel.title} fill style={{ objectFit: 'cover' }} />
+                ) : (
+                  <div style={{ width: '100%', height: '100%', background: '#2a2a30' }}></div>
+                )}
+              </div>
+              <div className={styles.modalInfo}>
+                <div className={styles.modalGenre}>{selectedNovel.genre}</div>
+                <h2 className={styles.modalTitle}>{selectedNovel.title}</h2>
+                <p className={styles.modalDescription}>
+                  Dive into the gripping world of {selectedNovel.title}. A masterful tale exploring the depths of {selectedNovel.genre.split(' - ')[0].toLowerCase()} and intense action.
+                </p>
+                <a href="#" className={styles.ctaButton} style={{ marginTop: '1.5rem', display: 'inline-block' }}>Read Now</a>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
