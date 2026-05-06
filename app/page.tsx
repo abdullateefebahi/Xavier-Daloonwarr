@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from './page.module.css';
 
-type Novel = { title: string; genre: string; image: string };
+type Novel = { title: string; genre: string; image: string; status: string; link?: string };
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,18 +43,18 @@ export default function Home() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const novels = [
-    { title: "My Gene Evolution System", genre: "Fantasy - Action - Sci-fi", image: "/images/my_gene_evolution.png" },
-    { title: "Blood and Ash", genre: "Fantasy - Mystery - Horror", image: "/images/blood_and_ash.png" },
-    { title: "Godfiend", genre: "Fantasy - Action - Transmigration", image: "/images/godfiend.png" },
-    { title: "Warzone", genre: "Fantasy - Action - Horror", image: "/images/warzone.png" },
-    { title: "The Failed Swordsman", genre: "Fantasy - Action - Survival", image: "/images/the_failed_swordsman.png" },
-    { title: "Heir of Montenegro", genre: "Modern - Action", image: "/images/heir_of_montenegro.png" },
-    { title: "Signed by Desire", genre: "Romance - Modern", image: "/images/signed_by_desire.png" },
-    { title: "The Ultimate Technomancer", genre: "LitRPG - Action - Magic", image: "/images/the_ultimate_technomancer.png" },
-    { title: "The Occultist", genre: "Fantasy - Action - Horror", image: "/images/the_occultist.png" },
-    { title: "Once the Gentleman", genre: "Fantasy - Action - Horror", image: "/images/once_the_gentleman.png" },
-    { title: "Crazy CEO", genre: "Modern - Romance", image: "/images/crazy_ceo.png" }
+  const novels: Novel[] = [
+    { title: "My Gene Evolution System", genre: "Fantasy - Action - Sci-fi", image: "/images/my_gene_evolution.png", status: "Started, Publishing, On Hiatus", link: "https://wbnv.in/a/a6iHw2J" },
+    { title: "Blood and Ash", genre: "Fantasy - Mystery - Horror", image: "/images/blood_and_ash.png", status: "Started, Publishing, Ongoing", link: "https://wbnv.in/a/99jmMnv" },
+    { title: "Godfiend", genre: "Fantasy - Action - Transmigration", image: "/images/godfiend.png", status: "Coming Soon!" },
+    { title: "Warzone", genre: "Fantasy - Action - Horror", image: "/images/warzone.png", status: "Coming Soon!" },
+    { title: "The Failed Swordsman", genre: "Fantasy - Action - Survival", image: "/images/the_failed_swordsman.png", status: "Coming Soon!" },
+    { title: "Heir of Montenegro", genre: "Modern - Action", image: "/images/heir_of_montenegro.png", status: "Coming Soon!" },
+    { title: "Signed by Desire", genre: "Romance - Modern", image: "/images/signed_by_desire.png", status: "Coming Soon!" },
+    { title: "The Ultimate Technomancer", genre: "LitRPG - Action - Magic", image: "/images/the_ultimate_technomancer.png", status: "Coming Soon!" },
+    { title: "The Occultist", genre: "Fantasy - Action - Horror", image: "/images/the_occultist.png", status: "Coming Soon!" },
+    { title: "Once the Gentleman", genre: "Fantasy - Action - Horror", image: "/images/once_the_gentleman.png", status: "Coming Soon!" },
+    { title: "Crazy CEO", genre: "Modern - Romance", image: "/images/crazy_ceo.png", status: "Coming Soon!" }
   ];
 
   return (
@@ -184,7 +184,20 @@ export default function Home() {
                 <p className={styles.modalDescription}>
                   Dive into the gripping world of {selectedNovel.title}. A masterful tale exploring the depths of {selectedNovel.genre.split(' - ')[0].toLowerCase()} and intense action.
                 </p>
-                <a href="#" className={styles.ctaButton} style={{ marginTop: '1.5rem', display: 'inline-block' }}>Read Now</a>
+                <a 
+                  href={selectedNovel.status === "Coming Soon!" ? undefined : (selectedNovel.link || "#")} 
+                  target={selectedNovel.link ? "_blank" : undefined}
+                  rel={selectedNovel.link ? "noopener noreferrer" : undefined}
+                  className={styles.ctaButton} 
+                  style={{ 
+                    marginTop: '1.5rem', 
+                    display: 'inline-block',
+                    opacity: selectedNovel.status === "Coming Soon!" ? 0.6 : 1,
+                    cursor: selectedNovel.status === "Coming Soon!" ? "not-allowed" : "pointer"
+                  }}
+                >
+                  {selectedNovel.status === "Coming Soon!" ? "Coming Soon" : "Read More"}
+                </a>
               </div>
             </div>
           )}
