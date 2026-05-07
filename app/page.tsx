@@ -91,7 +91,7 @@ export default function Home() {
         <div className={`${styles.heroContent} animate-fade-in`}>
           <h1 className={styles.heroTitle}>Speculative Fiction Author and Dark Manga Scriptwriter</h1>
           <p className={styles.heroSubtitle}>
-            World-Builder and Scriptwriter for the Sovereign Virtual Haven. Crafting pulse-pounding epics at the intersection of AI and human survival.
+            World-Builder and Scriptwriter for the Sovereign Virtual Haven. Crafting pulse-pounding epics at the intersection of Technology and human survival.
           </p>
           <a href="#novels" className={styles.ctaButton}>Explore Works</a>
         </div>
