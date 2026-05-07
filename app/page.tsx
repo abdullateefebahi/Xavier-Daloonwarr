@@ -47,14 +47,14 @@ export default function Home() {
     { title: "My Gene Evolution System", genre: "Fantasy - Action - Sci-fi", image: "/images/my_gene_evolution.png", status: "Started, Publishing, On Hiatus", link: "https://wbnv.in/a/a6iHw2J" },
     { title: "Blood and Ash", genre: "Fantasy - Mystery - Horror", image: "/images/blood_and_ash.png", status: "Started, Publishing, Ongoing", link: "https://wbnv.in/a/99jmMnV" },
     { title: "Godfiend", genre: "Fantasy - Action - Transmigration", image: "/images/godfiend.png", status: "Coming Soon!" },
-    { title: "Warzone", genre: "Fantasy - Action - Horror", image: "/images/warzone.png", status: "Coming Soon!" },
+    { title: "Warzone!", genre: "Modern - Action", image: "/images/warzone.png", status: "Coming Soon!" },
     { title: "The Failed Swordsman", genre: "Fantasy - Action - Survival", image: "/images/the_failed_swordsman.png", status: "Coming Soon!" },
     { title: "Heir of Montenegro", genre: "Modern - Action", image: "/images/heir_of_montenegro.png", status: "Coming Soon!" },
     { title: "Signed by Desire", genre: "Romance - Modern", image: "/images/signed_by_desire.png", status: "Coming Soon!" },
-    { title: "The Ultimate Technomancer", genre: "LitRPG - Action - Magic", image: "/images/the_ultimate_technomancer.png", status: "Coming Soon!" },
+    { title: "Ultimate Technomancer", genre: "LitRPG - Action - Magic", image: "/images/the_ultimate_technomancer.png", status: "Coming Soon!" },
     { title: "The Occultist", genre: "Fantasy - Action - Horror", image: "/images/the_occultist.png", status: "Coming Soon!" },
     { title: "Once the Gentleman", genre: "Fantasy - Action - Horror", image: "/images/once_the_gentleman.png", status: "Coming Soon!" },
-    { title: "Crazy CEO", genre: "Modern - Romance", image: "/images/crazy_ceo.png", status: "Coming Soon!" }
+    { title: "Her Crazy CEO", genre: "Modern - Romance", image: "/images/crazy_ceo.png", status: "Coming Soon!" }
   ];
 
   return (
