@@ -51,7 +51,7 @@ export default function Home() {
     { title: "The Failed Swordsman", genre: "Fantasy - Action - Survival", image: "/images/the_failed_swordsman.png", status: "Coming Soon!" },
     { title: "Heir of Montenegro", genre: "Modern - Action", image: "/images/heir_of_montenegro.png", status: "Coming Soon!" },
     { title: "Signed by Desire", genre: "Romance - Modern", image: "/images/signed_by_desire.png", status: "Coming Soon!" },
-    { title: "Ultimate Technomancer", genre: "LitRPG - Action - Magic", image: "/images/technomancer.png", status: "Coming Soon!" },
+    { title: "Ultimate Technomancer", genre: "LitRPG - Action - Magic", image: "/images/teckomancer.png", status: "Coming Soon!" },
     { title: "The Occultist", genre: "Fantasy - Action - Horror", image: "/images/the_occultist.png", status: "Coming Soon!" },
     { title: "Once the Gentleman", genre: "Fantasy - Action - Horror", image: "/images/once_the_gentleman.png", status: "Coming Soon!" },
     { title: "Her Crazy CEO", genre: "Modern - Romance", image: "/images/crazy_ceo.png", status: "Coming Soon!" }
