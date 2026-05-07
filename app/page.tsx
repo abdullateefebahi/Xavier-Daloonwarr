@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './page.module.css';
 
 type Novel = { title: string; genre: string; image: string; status: string; link?: string };
@@ -91,7 +92,7 @@ export default function Home() {
         <div className={`${styles.heroContent} animate-fade-in`}>
           <h1 className={styles.heroTitle}>Speculative Fiction Author and Dark Manga Scriptwriter</h1>
           <p className={styles.heroSubtitle}>
-            World-Builder and Scriptwriter for the Sovereign Virtual Haven. Crafting pulse-pounding epics at the intersection of Technology and human survival.
+            World-Builder and Scriptwriter for <Link href="/sovereign-virtual-haven" style={{ color: 'red', textDecoration: 'none' }}>Sovereign Virtual Haven</Link>. Crafting pulse-pounding epics at the intersection of Technology and human survival.
           </p>
           <a href="#novels" className={styles.ctaButton}>Explore Works</a>
         </div>
