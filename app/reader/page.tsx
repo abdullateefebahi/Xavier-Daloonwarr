@@ -122,8 +122,11 @@ export default function Reader() {
                   onError={(e) => {
                     // Fallback to a styled skeleton/placeholder if the image fails to load
                     e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.classList.add(styles.imageSkeleton);
-                    e.currentTarget.parentElement!.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#555;">Page ${index + 1}</div>`;
+                    const parent = e.currentTarget.parentElement;
+                    if (parent) {
+                      parent.classList.add(styles.imageSkeleton);
+                      parent.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#555;">Page ${index + 1}</div>`;
+                    }
                   }}
                 />
               </div>
@@ -145,9 +148,12 @@ export default function Reader() {
                   style={{ objectFit: 'contain' }}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.style.width = '500px';
-                    e.currentTarget.parentElement!.classList.add(styles.imageSkeleton);
-                    e.currentTarget.parentElement!.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#555;">Page ${currentPage + 1}</div>`;
+                    const parent = e.currentTarget.parentElement;
+                    if (parent) {
+                      parent.style.width = '500px';
+                      parent.classList.add(styles.imageSkeleton);
+                      parent.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#555;">Page ${currentPage + 1}</div>`;
+                    }
                   }}
                 />
               </div>
