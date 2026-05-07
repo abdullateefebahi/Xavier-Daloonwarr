@@ -10,13 +10,9 @@ import styles from './reader.module.css';
 const chapterData = {
   title: "Sovereign Virtual Haven",
   chapterNumber: 1,
-  chapterTitle: "The Awakening",
+  chapterTitle: "Disposal",
   pages: [
-    "/images/placeholder-page1.jpg",
-    "/images/placeholder-page2.jpg",
-    "/images/placeholder-page3.jpg",
-    "/images/placeholder-page4.jpg",
-    "/images/placeholder-page5.jpg",
+    "/images/chapter1-page1.png",
   ],
   hasNext: true,
   hasPrev: false,
