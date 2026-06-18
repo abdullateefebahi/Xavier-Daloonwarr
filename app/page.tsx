@@ -55,7 +55,8 @@ export default function Home() {
     { title: "Ultimate Technomancer", genre: "LitRPG - Action - Magic", image: "/images/teckomancer.png", status: "Coming Soon!" },
     { title: "The Occultist", genre: "Fantasy - Action - Horror", image: "/images/the_occultist.png", status: "Coming Soon!" },
     { title: "Once the Gentleman", genre: "Fantasy - Action - Horror", image: "/images/once_the_gentleman.png", status: "Coming Soon!" },
-    { title: "Her Crazy CEO", genre: "Modern - Romance", image: "/images/crazy_ceo.png", status: "Coming Soon!" }
+    { title: "Her Crazy CEO", genre: "Modern - Romance", image: "/images/crazy_ceo.png", status: "Coming Soon!" },
+    { title: "Sovereign Virtual Haven", genre: "LitRPG - Action - Magic", image: "/images/sovereign.png", status: "Coming Soon!" }
   ];
 
   return (
